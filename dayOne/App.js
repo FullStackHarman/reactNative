@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,useColorScheme,Image } from 'react-native';
+import flatCards from './components/flatcards/flatCards';
 
 export default function App() {
+  const isDark = useColorScheme()=== 'dark'
   return (
-    <View style={styles.container}>
-      <View style={styles.box}><Text> 1 </Text></View>
-      <View style={styles.box}><Text> 2 </Text></View>
-      
-   
-      
+    <View>
+      <flatCards/>
+
     </View>
   );
 }
